@@ -19,11 +19,13 @@ def checkWin(board):
     if sum([1 for i in range(3) for j in range(3) if board[i][j]])==9:
         return 3
     return 0
+
 def clear(): 
     if os.name == 'nt':
         os.system('cls') 
     else: 
-        os.system('clear') 
+        os.system('clear')
+
 if __name__ == "__main__":
     board = [[0 for i in range(3)] for j in range(3)]
     player = 1
@@ -37,7 +39,6 @@ if __name__ == "__main__":
         player = 2 - (player+1)%2
         clear()
         display(board)
-    messages = ["Player X has won !", "Player O has won !", "Game Draw"]
     if checkWin(board)==3:
         print("Game Draw")
     else:
