@@ -1,4 +1,4 @@
-# TicTacToe game
+import os
 
 def display(board):
     print(*[" "*4+"{} | {} | {}\n".format(*[symbols[index] for index in board[i]]) for i in range(3)], sep=" "*3+"-"*11+"\n")
@@ -19,7 +19,11 @@ def checkWin(board):
     if sum([1 for i in range(3) for j in range(3) if board[i][j]])==9:
         return 3
     return 0
-
+def clear(): 
+    if os.name == 'nt':
+        os.system('cls') 
+    else: 
+        os.system('clear') 
 if __name__ == "__main__":
     board = [[0 for i in range(3)] for j in range(3)]
     player = 1
@@ -31,6 +35,7 @@ if __name__ == "__main__":
         if choiceValidity(i, j):
             play(i, j)
         player = 2 - (player+1)%2
+        clear()
         display(board)
     messages = ["Player X has won !", "Player O has won !", "Game Draw"]
     if checkWin(board)==3:
