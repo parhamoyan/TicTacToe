@@ -32,6 +32,7 @@ class Game:
             os.system('cls') 
         else: 
             os.system('clear')
+            
     def start(self):
         self.display()
         while not self.checkWin():
