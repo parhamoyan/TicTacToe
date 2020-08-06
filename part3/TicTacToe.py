@@ -2,7 +2,6 @@ class Game:
     def __init__(self):
         self.board = [[0 for i in range(3)] for j in range(3)]
         self.player = 1
-        self.symbols = [" ", "X", "O"]
         
     def play(self, i, j):
         self.board[i][j] = self.player
