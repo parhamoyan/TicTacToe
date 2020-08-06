@@ -41,7 +41,7 @@ class App(QWidget):
             pixmap = QPixmap("{}_PLAYER.png".format(["X", "O"][self.game.getPlayer()-1])).scaled(180, 180)
             self.labels[i][j].setPixmap(pixmap)
             if self.game.checkWin():
-                buttonReply = QMessageBox.question(self, 'Message', self.messages[self.game.getPlayer()], QMessageBox.Ok)
+                QMessageBox.question(self, 'Message', self.messages[self.game.getPlayer()], QMessageBox.Ok)
             self.game.changePlayer()
             
 if __name__ == '__main__':
