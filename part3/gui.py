@@ -42,10 +42,6 @@ class App(QWidget):
             self.labels[i][j].setPixmap(pixmap)
             if self.game.checkWin():
                 buttonReply = QMessageBox.question(self, 'Message', self.messages[self.game.getPlayer()], QMessageBox.Ok)
-                if buttonReply == QMessageBox.Yes:
-                    print('Yes clicked.')
-                else:
-                    print('No clicked.')
             self.game.changePlayer()
             
 if __name__ == '__main__':
