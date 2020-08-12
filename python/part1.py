@@ -39,7 +39,6 @@ if __name__ == "__main__":
         player = 2 - (player+1)%2
         clear()
         display()
-    messages = ["Player X has won !", "Player O has won !", "Game Draw"]
     if checkWin()==3:
         print("Game Draw")
     else:
