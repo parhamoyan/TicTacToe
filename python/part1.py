@@ -36,10 +36,10 @@ if __name__ == "__main__":
         j = int(input("Enter j : "))
         if choiceValidity(i, j):
             play(i, j)
-        player = 2 - (player+1)%2
+            player = 2 - (player+1)%2
         clear()
         display()
     if checkWin()==3:
         print("Game Draw")
     else:
-        print("Player {} has won !".format(["X", "O"][checkWin()-1]))
+        print("Player {} has won !".format(symbols[checkWin()]))
