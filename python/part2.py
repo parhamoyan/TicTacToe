@@ -40,13 +40,13 @@ class Game:
             j = int(input("Enter j : "))
             if self.choiceValidity(i, j):
                 self.play(i, j)
-            self.player = 2 - (self.player+1)%2
+                self.player = 2 - (self.player+1)%2
             self.clear()
             self.display()
         if self.checkWin()==3:
             print("Game Draw")
         else:
-            print("Player {} has won !".format(["X", "O"][self.checkWin()-1]))
+            print("Player {} has won !".format(self.symbols[self.checkWin()]))
 
 if __name__ == "__main__":
     game = Game()
