@@ -5,3 +5,4 @@ Written in 5 Programming Languages.
 * C++ using Qt
 * HTML & CSS & JavaScript
 * C
+* Bash
