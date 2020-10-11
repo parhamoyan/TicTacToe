@@ -1,5 +1,5 @@
 # Tic Tac Toe
-Written in 5 Programming Languages.
+Written in 6 Programming Languages.
 * Python using PyQt5 Module
 * Java using swing framework
 * C++ using Qt
